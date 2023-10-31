@@ -6,6 +6,13 @@ This repository holds solutions for experiments for binary file visualization
 and reverse engineering of binary data. It is inspired by [TED talk by Chris
 Domas](https://www.ted.com/talks/chris_domas_the_1s_and_0s_behind_cyber_warfare).
 
+In the context of directed graphs, commonly referred to as digraphs, data can be
+processed and visualized in a unique manner. Specifically, binary files
+containing relevant data are read into the system, and this data is subsequently
+extracted in the form of tuples. These tuples represent ordered pairs of values
+that can be utilized to denote specific points or coordinates. Once the tuples
+have been extracted, they are then translated onto a Cartesian plane.
+
 ## Running this locally
 
 The application is written in C and should work with most compilers. I tested it
