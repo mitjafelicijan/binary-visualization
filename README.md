@@ -1,6 +1,6 @@
-# Visualization of binary files
-
 ![Preview](https://github.com/mitjafelicijan/binary-visualization/assets/296714/d7dd736f-7061-4314-8d2e-86b2dc89de62)
+
+# Visualization of binary files
 
 This repository holds solutions for experiments for binary file visualization
 and reverse engineering of binary data. It is inspired by [TED talk by Chris
