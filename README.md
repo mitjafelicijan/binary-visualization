@@ -68,6 +68,21 @@ folder in this repository so feel free to browse.
   - The Masked Marvel - Mississippi Boweavil Blues
   - Prince Albert Hunt's Texas Ramblers - Wake Up Jacob
   - George Lewis & His New Orleans Stompers - Don't Go 'Way Nobody
+- All the text for testing ASCII was used from [Project
+  Gutenberg](https://www.gutenberg.org/browse/scores/top) since this material is
+  in Public Domain.
+  - Frankenstein; Or, The Modern Prometheus by Mary Wollstonecraft Shelley (4234)
+  - Romeo and Juliet by William Shakespeare (1908)
+  - Pride and Prejudice by Jane Austen (1907)
+  - The Scarlet Letter by Nathaniel Hawthorne (1787)
+  - Dracula by Bram Stoker (1320)
+  - The Great Gatsby by F. Scott Fitzgerald (1237)
+  - Alice's Adventures in Wonderland by Lewis Carroll (1196)
+  - A Doll's House: a play by Henrik Ibsen (1042)
+  - Metamorphosis by Franz Kafka (963)
+  - The Strange Case of Dr. Jekyll and Mr. Hyde by Robert Louis Stevenson (962)
+  - The Yellow Wallpaper by Charlotte Perkins Gilman (927)
+  - A Modest Proposal by Jonathan Swift (924)
 
 ## Special thanks
 

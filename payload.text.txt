@@ -1,0 +1,12 @@
+other data/text/pg1080.txt out/text.pg1080.png
+other data/text/pg11.txt out/text.pg11.png
+other data/text/pg1342.txt out/text.pg1342.png
+other data/text/pg1513.txt out/text.pg1513.png
+other data/text/pg1952.txt out/text.pg1952.png
+other data/text/pg25344.txt out/text.pg25344.png
+other data/text/pg2542.txt out/text.pg2542.png
+other data/text/pg345.txt out/text.pg345.png
+other data/text/pg43.txt out/text.pg43.png
+other data/text/pg5200.txt out/text.pg5200.png
+other data/text/pg64317.txt out/text.pg64317.png
+other data/text/pg84.txt out/text.pg84.png
