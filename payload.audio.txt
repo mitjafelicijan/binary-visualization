@@ -1,0 +1,25 @@
+other data/audio/mp3/court-house-blues-take-1.mp3 out/audio.mp3.1.png
+other data/audio/mp3/dont-go-way-nobody.mp3 out/audio.mp3.2.png
+other data/audio/mp3/drunkards-special-by-coley-jones.mp3 out/audio.mp3.3.png
+other data/audio/mp3/im-gonna-get-me-a-man-thats-all.mp3 out/audio.mp3.4.png
+other data/audio/mp3/jump-steady-blues.mp3 out/audio.mp3.5.png
+other data/audio/mp3/little-bits.mp3 out/audio.mp3.6.png
+other data/audio/mp3/mississippi-boweavil-blues-by-the-masked-marvel.mp3 out/audio.mp3.7.png
+other data/audio/mp3/night-latch-key-blues.mp3 out/audio.mp3.8.png
+other data/audio/mp3/old-dog-blue-by-jim-jackson.mp3 out/audio.mp3.9.png
+other data/audio/mp3/one-dime-blues.mp3 out/audio.mp3.10.png
+other data/audio/mp3/poor-me-blues.mp3 out/audio.mp3.11.png
+other data/audio/mp3/wake-up-jacob-by-prince-albert-hunts-texas-ramblers.mp3 out/audio.mp3.12.png
+
+other data/audio/wav/court-house-blues-take-1.wav out/audio.wav.1.png
+other data/audio/wav/dont-go-way-nobody.wav out/audio.wav.2.png
+other data/audio/wav/drunkards-special-by-coley-jones.wav out/audio.wav.3.png
+other data/audio/wav/im-gonna-get-me-a-man-thats-all.wav out/audio.wav.4.png
+other data/audio/wav/jump-steady-blues.wav out/audio.wav.5.png
+other data/audio/wav/little-bits.wav out/audio.wav.6.png
+other data/audio/wav/mississippi-boweavil-blues-by-the-masked-marvel.wav out/audio.wav.7.png
+other data/audio/wav/night-latch-key-blues.wav out/audio.wav.8.png
+other data/audio/wav/old-dog-blue-by-jim-jackson.wav out/audio.wav.9.png
+other data/audio/wav/one-dime-blues.wav out/audio.wav.10.png
+other data/audio/wav/poor-me-blues.wav out/audio.wav.11.png
+other data/audio/wav/wake-up-jacob-by-prince-albert-hunts-texas-ramblers.wav out/audio.wav.12.png
