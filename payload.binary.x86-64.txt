@@ -1,0 +1,12 @@
+other /bin/bash out/binary.bash.x86-64.png
+other /bin/bc out/binary.bc.x86-64.png
+other /bin/tree out/binary.tree.x86-64.png
+other /bin/ls out/binary.ls.x86-64.png
+other /bin/bison out/binary.bison.x86-64.png
+other /bin/cat out/binary.cat.x86-64.png
+other /bin/cc65 out/binary.cc65.x86-64.png
+other /bin/dd out/binary.dd.x86-64.png
+other /bin/clang out/binary.clang.x86-64.png
+other /bin/gcc out/binary.gcc.x86-64.png
+other /bin/make out/binary.make.x86-64.png
+other /bin/python3 out/binary.python3.x86-64.png
