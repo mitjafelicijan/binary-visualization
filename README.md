@@ -36,7 +36,7 @@ Usage: ./digraph -t type -i <input file> -o <output file>
 
 There are two types of inputs. One is `image` and the other one is
 `other`. Image is a special case because most of the modern formats compress
-images and the result is nothings like interpreting raw images. So in this case
+images and the result is nothing like interpreting raw images. So in this case
 image is being decompressed and then visualized.
 
 Same goes with audio files. Mp3 files I provided for example are also by nature
