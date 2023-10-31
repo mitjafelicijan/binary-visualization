@@ -2,9 +2,38 @@
 
 ![Preview](https://github.com/mitjafelicijan/binary-visualization/assets/296714/8c7e016c-8f58-4af1-9cce-9f4366219bbe)
 
-This repository holds solutions for expriments for binary file visualization and
-reverse engineering of binary data. It is inspired by [TED talk by Chris
+This repository holds solutions for experiments for binary file visualization
+and reverse engineering of binary data. It is inspired by [TED talk by Chris
 Domas](https://www.ted.com/talks/chris_domas_the_1s_and_0s_behind_cyber_warfare).
+
+## Running this locally
+
+The application is written in C and should work with most compilers. I tested it
+with GCC, Clang and TinyCC.
+
+```sh
+# compile first
+CC=clang make -B
+```
+
+If this step is successful I provide couple of example that can be executed with
+`bash payload.sh payload.image.txt`. Check `payload.image.txt` to see what is
+happening there.
+
+But you can also execute it directly.
+
+```sh
+$ ./digraph
+Usage: ./digraph -t type -i <input file> -o <output file>
+```
+
+There are two types of inputs. One is `image` and the other one is
+`other`. Image is a special case because most of the modern formats compress
+images and the result is nothings like interpreting raw images. So in this case
+image is being decompressed and then visualized.
+
+Same goes with audio files. Mp3 files I provided for example are also by nature
+of Mp3's compressed and that is why I also converted them into WAV files.
 
 ## Testing data
 
@@ -18,7 +47,7 @@ folder in this repository so feel free to browse.
 - For darwin-arm64 binaries I choose binaries from Macbook Air M1 `/bin/`
   folder.
 - Audio was selected from [Open Music Archive](http://openmusicarchive.org/) and
-  songs in Public Domain was choosen. I extracted 10 seconds from 30th second on
+  songs in Public Domain was chosen. I extracted 10 seconds from 30th second on
   to keep WAV files small. Mp3 and WAV was tested.
   - Clara Smith - Court House Blues
   - Virginia Liston - I'm Gonna Get Me A Man That's All
