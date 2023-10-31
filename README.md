@@ -2,7 +2,7 @@
 
 # Visualization of binary files
 
-This repository holds solutions for experiments for binary file visualization
+This repository holds solutions for experiments with binary file visualization
 and reverse engineering of binary data. It is inspired by [TED talk by Chris
 Domas](https://www.ted.com/talks/chris_domas_the_1s_and_0s_behind_cyber_warfare).
 
