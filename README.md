@@ -8,6 +8,9 @@ Domas](https://www.ted.com/talks/chris_domas_the_1s_and_0s_behind_cyber_warfare)
 
 ## Testing data
 
+All data, but binaries (since they are system programs) is available in `data`
+folder in this repository so feel free to browse.
+
 - All images are from https://unsplash.com/ and resized to 512x512. But you can
   use any size possible for testing. I resized them to keep tests quick and
   filesizes small.
