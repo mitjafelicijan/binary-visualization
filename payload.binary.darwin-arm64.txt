@@ -1,0 +1,12 @@
+other /usr/bin/tar out/binary.tar.darwin-arm64.png
+other /usr/bin/tee out/binary.tee.darwin-arm64.png
+other /usr/bin/dig out/binary.dig.darwin-arm64.png
+other /usr/bin/alias out/binary.alias.darwin-arm64.png
+other /usr/bin/bison out/binary.bison.darwin-arm64.png
+other /usr/bin/sed out/binary.sed.darwin-arm64.png
+other /usr/bin/more out/binary.more.darwin-arm64.png
+other /usr/bin/scp out/binary.scp.darwin-arm64.png
+other /usr/bin/clang out/binary.clang.darwin-arm64.png
+other /usr/bin/sort out/binary.sort.darwin-arm64.png
+other /usr/bin/make out/binary.make.darwin-arm64.png
+other /usr/bin/zcat out/binary.zcat.darwin-arm64.png
