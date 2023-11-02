@@ -25,6 +25,7 @@
         var selectedObject = scene.getObjectByName('glpoints');
         if (selectedObject) {
           scene.remove(selectedObject);
+          renderer.render(scene, camera);
         }
 
         const points = [];
