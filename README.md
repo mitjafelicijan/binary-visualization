@@ -20,11 +20,11 @@ with GCC, Clang and TinyCC.
 
 ```sh
 # compile first
-CC=clang make -B
+CC=clang make digraph -B
 ```
 
 If this step is successful I provide couple of example that can be executed with
-`bash payload.sh payload.image.txt`. Check `payload.image.txt` to see what is
+`bash payload.sh digraph payload.image.txt`. Check `payload.image.txt` to see what is
 happening there.
 
 But you can also execute it directly.

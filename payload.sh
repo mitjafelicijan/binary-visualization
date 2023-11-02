@@ -2,8 +2,8 @@
 
 set -xe
 
-if [[ $# -eq 0 ]]; then
-	echo "Usage: $0 <filename>"
+if [[ $# -ne 2 ]]; then
+	echo "Usage: $0 [digraph|trigraph] <filename>"
 	exit 1
 fi
 
@@ -15,5 +15,12 @@ while IFS= read -r line; do
 	input="${values[1]}"
 	output="${values[2]}"
 
-	./digraph -t $type -i $input -o $output
-done < $1
+	if [[ $1 == "digraph" ]]; then
+		./digraph -t $type -i $input -o $output.png
+	elif [[ $1 == "trigraph" ]]; then
+		./trigraph -t $type -i $input -o $output.pc
+	else
+		echo "Invalid argument: $1"
+		exit 1
+	fi
+done < $2
