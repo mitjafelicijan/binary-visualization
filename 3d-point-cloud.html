@@ -42,7 +42,7 @@
 			scene.add(helper);
 
       const points = [];
-      const req = await fetch('/out/text.pg11.pc');
+      const req = await fetch('./out/text.pg11.pc');
       const data = await req.text();
       data.split('\n').forEach(el => {
         const parts = el.split(',');
