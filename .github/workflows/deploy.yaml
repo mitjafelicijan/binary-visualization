@@ -29,6 +29,7 @@ jobs:
         run: |
           mkdir public
           cp 3d-point-cloud.html public/index.html
+          cp pc-list.txt public/
           cp -rf out/ public/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2

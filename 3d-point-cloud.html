@@ -5,6 +5,7 @@
     <style>
       html, body { padding: 0; margin: 0; overscroll: hidden; }
       canvas { display: block; }
+      select { position: fixed; top: 20px; right: 20px; padding: 0.3em; }
     </style>
   </head>
   <body>
@@ -20,76 +21,112 @@
       import * as THREE from 'three';
       import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+      async function loadGeometry(inputFile, scene, renderer, camera) {
+        const points = [];
+        const req = await fetch(inputFile);
+        const data = await req.text();
+        data.split('\n').forEach(el => {
+          const parts = el.split(',');
+          const x = Number(parts[0]);
+          const y = Number(parts[1]);
+          const z = Number(parts[2]);
+          const intensity = Number(parts[3]);
+
+          if (x && y && z && intensity) {
+            points.push([x, y, z, intensity]);
+          }
+        });
+
+        const geometry = new THREE.BufferGeometry();
+        const vertices = [];
+        const colors = [];
+
+        for (let i = 0; i < points.length; i++) {
+          const x = points[i][0];
+          const y = points[i][1];
+          const z = points[i][2];
+          const intensity = points[i][3];
+          vertices.push(x, y, z);
+
+          const color = new THREE.Color();
+          color.setHSL(intensity / 5, 1, 0.5);
+          colors.push(color.r, color.g, color.b);
+        }
+
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+        geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+        geometry.computeBoundingSphere();
+
+        const material = new THREE.PointsMaterial({ size: 0.1, vertexColors: true });
+        const glpoints = new THREE.Points(geometry, material);
+        glpoints.position.set(-(256/2), 0, -(256/2));
+        glpoints.name = 'meme';
+        scene.add(glpoints);
+
+        renderer.render(scene, camera);
+      }
+
+      async function loadListOfPC() {
+        const list = [];
+        const req = await fetch('./pc-list.txt');
+        const data = await req.text();
+        data.split('\n').forEach(el => {
+          list.push(el);
+        });
+        return list;
+      }
+
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer({ antialias: true });
 
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(window.devicePixelRatio);
-
       document.body.appendChild(renderer.domElement);
 
-			const controls = new OrbitControls( camera, renderer.domElement );
-			controls.minDistance = 10;
-			controls.maxDistance = 1000;
-			controls.enablePan = true;
-			controls.addEventListener('change', () => renderer.render(scene, camera));
+      const controls = new OrbitControls( camera, renderer.domElement );
+      controls.minDistance = 10;
+      controls.maxDistance = 1000;
+      controls.enablePan = true;
+      controls.addEventListener('change', () => renderer.render(scene, camera));
 
       const helper = new THREE.GridHelper(400, 20);
-			helper.position.y = 0;
-			helper.material.opacity = 0.3;
-			helper.material.transparent = true;
-			scene.add(helper);
-
-      const points = [];
-      const req = await fetch('./out/text.pg11.pc');
-      const data = await req.text();
-      data.split('\n').forEach(el => {
-        const parts = el.split(',');
-        const x = Number(parts[0]);
-        const y = Number(parts[1]);
-        const z = Number(parts[2]);
-        const intensity = Number(parts[3]);
-
-        if (x && y && z && intensity) {
-          points.push([x, y, z, intensity]);
-        }
-      });
-
-      const geometry = new THREE.BufferGeometry();
-      const vertices = [];
-      const colors = [];
-
-      for (let i = 0; i < points.length; i++) {
-        const x = points[i][0];
-        const y = points[i][1];
-        const z = points[i][2];
-        const intensity = points[i][3];
-        vertices.push(x, y, z);
-
-        const color = new THREE.Color();
-        color.setHSL(intensity / 5, 1, 0.5);
-        colors.push(color.r, color.g, color.b);
-      }
-
-      geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-      geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-      geometry.computeBoundingSphere();
-
-      const material = new THREE.PointsMaterial({ size: 0.1, vertexColors: true });
-      const glpoints = new THREE.Points(geometry, material);
-      glpoints.position.set(-(256/2), 0, -(256/2));
-      scene.add(glpoints);
+      helper.position.y = 0;
+      helper.material.opacity = 0.3;
+      helper.material.transparent = true;
+      scene.add(helper);
 
       camera.position.set(180, 180, 180);
       renderer.render(scene, camera);
       controls.update();
 
+      const listOfPCFiles = await loadListOfPC();
+      const selector = document.createElement('select');
+      listOfPCFiles.reverse().forEach(el => {
+        if (el.length) {
+          const option = document.createElement('option');
+          option.innerText = el;
+          selector.appendChild(option);
+        }
+      });
+      document.body.appendChild(selector);
+      selector.addEventListener('change', async (evt) => {
+        const item = evt.target.options[evt.target.selectedIndex];
+        if (item) {
+          await loadGeometry(`./${item.innerText}`, scene, renderer, camera);
+        }
+      });
+
+      if (listOfPCFiles.length) {
+        const firstItem = document.querySelector('select option');
+        await loadGeometry(`./${firstItem.innerText}`, scene, renderer, camera);
+      }
+
       window.addEventListener('resize', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.render(scene, camera);
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
       });
     </script>
   </body>
