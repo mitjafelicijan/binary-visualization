@@ -22,6 +22,11 @@
       import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
       async function loadGeometry(inputFile, scene, renderer, camera) {
+        var selectedObject = scene.getObjectByName('glpoints');
+        if (selectedObject) {
+          scene.remove(selectedObject);
+        }
+
         const points = [];
         const req = await fetch(inputFile);
         const data = await req.text();
@@ -60,7 +65,7 @@
         const material = new THREE.PointsMaterial({ size: 0.1, vertexColors: true });
         const glpoints = new THREE.Points(geometry, material);
         glpoints.position.set(-(256/2), 0, -(256/2));
-        glpoints.name = 'meme';
+        glpoints.name = 'glpoints';
         scene.add(glpoints);
 
         renderer.render(scene, camera);
