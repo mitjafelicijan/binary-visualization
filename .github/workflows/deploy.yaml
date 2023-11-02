@@ -28,8 +28,10 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir public
-          cp 3d-point-cloud.html public/index.html
-          cp pc-list.txt public/
+          cp www/index.html public/
+          cp www/3d-point-cloud.html public/
+          cp www/pc-list.txt public/
+          cp www/image-list.txt public/
           cp -rf out/ public/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
