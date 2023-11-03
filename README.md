@@ -21,6 +21,7 @@ with GCC, Clang and TinyCC.
 ```sh
 # compile first
 CC=clang make digraph -B
+CC=clang make trigraph -B
 ```
 
 If this step is successful I provide couple of example that can be executed with
@@ -32,6 +33,7 @@ But you can also execute it directly.
 ```sh
 $ ./digraph
 Usage: ./digraph -t type -i <input file> -o <output file>
+Usage: ./trigraph -t type -i <input file> -o <output file>
 ```
 
 There are two types of inputs. One is `image` and the other one is
@@ -41,6 +43,15 @@ image is being decompressed and then visualized.
 
 Same goes with audio files. Mp3 files I provided for example are also by nature
 of Mp3's compressed and that is why I also converted them into WAV files.
+
+## 3D view of the files
+
+![3D point cloud](https://github.com/mitjafelicijan/binary-visualization/assets/296714/50595b85-b8f7-40be-8a5d-ccbe27e09563)
+
+Folder `www` contains `3d-point-cloud.html`. This reads `*.pc` files from `out`
+folder and generates 3D point cloud.
+
+This can also be seen at https://mitjafelicijan.github.io/binary-visualization/.
 
 ## Testing data
 
