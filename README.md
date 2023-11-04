@@ -1,4 +1,4 @@
-![Preview](https://github.com/mitjafelicijan/binary-visualization/assets/296714/d7dd736f-7061-4314-8d2e-86b2dc89de62)
+![Digraphs](./assets/digraphs.png)
 
 # Visualization of binary files
 
@@ -46,7 +46,7 @@ of Mp3's compressed and that is why I also converted them into WAV files.
 
 ## 3D view of the files
 
-![3D point cloud](https://github.com/mitjafelicijan/binary-visualization/assets/296714/50595b85-b8f7-40be-8a5d-ccbe27e09563)
+![Trigraphs](./assets/trigraphs.gif)
 
 Folder `www` contains `3d-point-cloud.html`. This reads `*.pc` files from `out`
 folder and generates 3D point cloud.
