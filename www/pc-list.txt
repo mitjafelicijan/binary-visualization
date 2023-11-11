@@ -46,3 +46,15 @@ out/text.pg43.pc
 out/text.pg5200.pc
 out/text.pg64317.pc
 out/text.pg84.pc
+out/image.1.pc
+out/image.2.pc
+out/image.3.pc
+out/image.4.pc
+out/image.5.pc
+out/image.6.pc
+out/image.7.pc
+out/image.8.pc
+out/image.9.pc
+out/image.10.pc
+out/image.11.pc
+out/image.12.pc
